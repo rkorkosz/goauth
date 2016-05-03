@@ -1,0 +1,16 @@
+{{define "title"}}Login{{end}}
+
+{{define "content"}}
+<form method="post" style="width: 30%; margin-top: 5%;" class="container">
+    {{ .csrfField }}
+    <div class="input-field">
+        <input type="email" name="email" id="email" class="validate" required>
+        <label for="email">Email</label>
+    </div>
+    <div class="input-field">
+        <input type="password" name="password" id="password" class="validate" required>
+        <label for="password">Password</label>
+    </div>
+    <input type="submit" value="Login" class="waves-effect waves-light btn">
+</form>
+{{end}}

@@ -1,0 +1,20 @@
+{{define "title"}}Register{{end}}
+
+{{define "content"}}
+<form method="post" style="width: 30%; margin-top: 5%;" class="container">
+    {{ .csrfField }}
+    <div class="input-field">
+        <input type="email" name="email" id="email" class="validate" required>
+        <label for="email">Email</label>
+    </div>
+    <div class="input-field">
+        <input type="password" name="password" id="password" class="validate" required>
+        <label for="password">Password</label>
+    </div>
+    <div class="input-field">
+        <input type="password" name="confirm_password" id="confirm_password" class="validate" required>
+        <label for="confirm_password">Confirm password</label>
+    </div>
+    <input type="submit" value="Register" class="waves-effect waves-light btn">
+</form>
+{{end}}

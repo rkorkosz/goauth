@@ -1,0 +1,12 @@
+{{define "title"}}Project Form{{end}}
+
+{{define "content"}}
+<form method="post" class="container">
+    {{ .csrfField }}
+    <div class="input-field">
+        <input type="text" name="name" id="name" class="validate" required {{if .Project.Name}}value="{{.Project.Name}}"{{end}}>
+        <label for="name">Name</label>
+    </div>
+    <input type="submit" value="Submit" class="waves-effect waves-light btn">
+</form>
+{{end}}
